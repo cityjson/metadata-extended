@@ -162,9 +162,9 @@
           ]
         },
         "onlineResource": {
-        "type": "string",
-        "format": "uri",
-        "pattern": "^(https?|ftp)://"
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?|ftp)://"
         },
         "fileIdentifier": {
           "type": "string"
