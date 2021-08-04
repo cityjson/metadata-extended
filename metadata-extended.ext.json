@@ -166,6 +166,10 @@
         "fileIdentifier": {
           "type": "string"
         },
+        "geographicLocation": {
+          "type": "string",
+          "description": "the name of the area for instance"
+        },
         "metadataStandard": {
           "type": "string"
         },
