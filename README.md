@@ -7,10 +7,10 @@ Works with CityJSON v1.1+
 The CityJSON v1.1 core `"metadata"` has only those 6 properties allowed:
 
   - citymodelIdentifier
+  - datasetPointOfContact
   - datasetTitle
   - datasetReferenceDate
   - geographicalExtent
-  - geographicLocation
   - referenceSystem
 
 and the MetadataExtended Extension adds several ISO19115-compliant properties, see the paper [A metadata ADE for CityGML](http://dx.doi.org/10.1186/s40965-018-0057-4) for more details and justifications.
