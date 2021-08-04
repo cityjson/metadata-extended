@@ -150,16 +150,19 @@
           "pattern": "^(\\d\\.)(\\d)$"
         },
         "spatialRepresentationType": {
-          "type": "string",
-          "description": "from ISO19115 codelist",
-          "enum": [
-            "vector",
-            "grid",
-            "TIN",
-            "textTable",
-            "stereoModel",
-            "video"
-          ]
+          "type": "array",
+          "items": {
+            "type": "string",
+            "description": "from ISO19115 codelist",
+            "enum": [
+              "vector",
+              "grid",
+              "TIN",
+              "textTable",
+              "stereoModel",
+              "video"
+            ]
+          }
         },
         "onlineResource": {
           "type": "string",
