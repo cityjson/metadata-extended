@@ -142,6 +142,9 @@
             "disaster"
           ]
         },
+        "distributionFormat": {
+          "type": "string"
+        },
         "distributionFormatVersion": {
           "type": "string",
           "pattern": "^(\\d\\.)(\\d)$"
