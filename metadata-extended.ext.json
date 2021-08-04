@@ -36,72 +36,51 @@
         "emailAddress": {
           "type": "string",
           "format": "email"
-        }
-      },
-      "oneOf": [
-        {
-          "type": "object",
-          "properties": {
-            "contactType": {
-              "type": "string",
-              "enum": [
-                "individual"
-              ]
-            },
-            "role": {
-              "type": "string",
-              "description": "from ISO 19115 codelist",
-              "enum": [
-                "resourceProvider",
-                "custodian",
-                "owner",
-                "user",
-                "distributor",
-                "originator",
-                "pointOfContact",
-                "principalInvestigator",
-                "processor",
-                "publisher",
-                "author",
-                "sponsor",
-                "co-author",
-                "collaborator",
-                "editor",
-                "mediator",
-                "rightsHolder",
-                "contributor",
-                "funder",
-                "stakeholder"
-              ]
-            },
-            "organization": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "contactType"
+        },
+        "contactType": {
+          "type": "string",
+          "enum": [ "individual", "organization" ]
+        },
+        "role": {
+          "type": "string",
+          "description": "from ISO 19115 codelist",
+          "enum": [
+            "resourceProvider",
+            "custodian",
+            "owner",
+            "user",
+            "distributor",
+            "originator",
+            "pointOfContact",
+            "principalInvestigator",
+            "processor",
+            "publisher",
+            "author",
+            "sponsor",
+            "co-author",
+            "collaborator",
+            "editor",
+            "mediator",
+            "rightsHolder",
+            "contributor",
+            "funder",
+            "stakeholder"
           ]
         },
-        {
-          "type": "object",
-          "properties": {
-            "contactType": {
-              "type": "string",
-              "enum": [
-                "organization"
-              ]
-            },
-            "website": {
-              "type": "string",
-              "format": "uri",
-              "pattern": "^(https?)://"
-            }
-          },
-          "required": [
-            "contactType"
-          ]
+        "organization": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?)://"
         }
-      ]
+      },
+      "required": [
+            "contactName",
+            "emailAddress"
+      ],
+      "additionalProperties": false
     },
     "featureData": {
       "type": "object",
