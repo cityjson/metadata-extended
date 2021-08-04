@@ -2,7 +2,7 @@
   "type": "CityJSON_Extension",
   "name": "MetadataExtended",
   "uri": "http://someurl.org/metadata-extented.ext.json",
-  "version": "0.5",
+  "version": "0.2",
   "description": "Extension to store ISO 19115 metadata, to extend the core of CityJSON v1.1+",
   
   "definitions": {
