@@ -368,6 +368,9 @@
         "presentLoDs": {
           "$ref": "#/definitions/presentLoDs"
         },
+        "triangulated": { 
+          "type": "boolean"
+        },        
         "cityfeatureMetadata": {
           "type": "object",
           "additionalProperties": {
