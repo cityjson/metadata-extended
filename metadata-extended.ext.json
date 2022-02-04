@@ -1,8 +1,8 @@
 {
   "type": "CityJSON_Extension",
   "name": "MetadataExtended",
-  "uri": "http://someurl.org/metadata-extented.ext.json",
-  "version": "0.2",
+  "uri": "https://raw.githubusercontent.com/cityjson/metadata-extended/0.6/metadata-extended.ext.json",
+  "version": "0.6",
   "description": "Extension to store ISO 19115 metadata, to extend the core of CityJSON v1.1+",
   
   "definitions": {
@@ -371,7 +371,7 @@
         "presentLoDs": {
           "$ref": "#/definitions/presentLoDs"
         },
-        "triangulated": { 
+        "isTriangulated": { 
           "type": "boolean"
         },        
         "cityfeatureMetadata": {
