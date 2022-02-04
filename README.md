@@ -4,7 +4,7 @@
 CityJSON Extension to store ISO19115-compliant metadata, extends the few metadata properties of the core.
 Works with CityJSON v1.1+ only.
 
-The CityJSON v1.1 core `"metadata"` has only those 6 properties ([see specifications for more details](https://www.cityjson.org/specs/#metadata):
+The CityJSON v1.1 core `"metadata"` has only those 6 properties ([see specifications for more details](https://www.cityjson.org/specs/#metadata)):
 
   - geographicalExtent
   - identifier
