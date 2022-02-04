@@ -2,9 +2,9 @@
 # MetadataExtended
 
 CityJSON Extension to store ISO19115-compliant metadata, extends the few metadata properties of the core.
-Works with CityJSON v1.1+
+Works with CityJSON v1.1+ only.
 
-The CityJSON v1.1 core `"metadata"` has only those 6 properties allowed:
+The CityJSON v1.1 core `"metadata"` has only those 6 properties ([see specifications for more details](https://www.cityjson.org/specs/#metadata):
 
   - geographicalExtent
   - identifier
@@ -13,8 +13,40 @@ The CityJSON v1.1 core `"metadata"` has only those 6 properties allowed:
   - referenceSystem
   - title
 
-and the MetadataExtended Extension adds several ISO19115-compliant properties, see the paper [A metadata ADE for CityGML](http://dx.doi.org/10.1186/s40965-018-0057-4) for more details and justifications.
+and the MetadataExtended Extension adds several ISO19115-compliant properties, those are documented in the paper [A metadata ADE for CityGML](http://dx.doi.org/10.1186/s40965-018-0057-4).
 
+
+## Integrated in cjio 
+
+The easiest way to use the MetadataExtended is by using the [software cjio](https://github.com/cityjson/cjio).
+Those 4 operators are related:
+
+```bash
+metadata_create   Add the +metadata-extended properties.
+metadata_get      Shows the metadata and +metadata-extended of this dataset.
+metadata_remove   Remove the +metadata-extended properties.
+metadata_update   Update the +metadata-extended.
+```
+
+and most operators (eg `subset`, `lod_filter`, etc.) will update the `"+metadata-extended"` property.
+
+If the `"+metadata-extended"` is not present in the file, then nothing will be done. 
+But if it is present then it'll be automatically updated.
+
+To start use the `"+metadata-extended"`:
+
+```bash
+cjio myfile.city.json metadata_create save myfile.city.json
+```
+
+To remove the `"+metadata-extended"` property (but keep `"metadata"`):
+
+```bash
+cjio myfile.city.json metadata_remove save myfile.city.json
+```
+
+
+## Example of a CityJSON file using the +metadata-extended
 
 ```json
   {
