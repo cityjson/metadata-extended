@@ -6,12 +6,12 @@ Works with CityJSON v1.1+
 
 The CityJSON v1.1 core `"metadata"` has only those 6 properties allowed:
 
-  - citymodelIdentifier
-  - datasetPointOfContact
-  - datasetTitle
-  - datasetReferenceDate
   - geographicalExtent
+  - identifier
+  - pointOfContact
+  - referenceDate
   - referenceSystem
+  - title
 
 and the MetadataExtended Extension adds several ISO19115-compliant properties, see the paper [A metadata ADE for CityGML](http://dx.doi.org/10.1186/s40965-018-0057-4) for more details and justifications.
 
@@ -20,32 +20,33 @@ and the MetadataExtended Extension adds several ISO19115-compliant properties, s
   {
     "type": "CityJSON",
     "version": "1.1",
-    "CityObjects": {},
-    "vertices": [],
     "extensions":
     {
         "Metadata-Extended":
         {
-            "url": "https://raw.githubusercontent.com/cityjson/metadata-extended/main/metadata-extended.ext.json",
-            "version": "0.5"
+            "url": "https://raw.githubusercontent.com/cityjson/metadata-extended/0.6/metadata-extended.ext.json",
+            "version": "0.6"
         }        
     },
     "metadata":
     {
-      "referenceSystem": "https://www.opengis.net/def/crs/0/7415",
-      "citymodelIdentifier": "eaeceeaa-3f66-429a-b81d-bbc6140b8c1c",
-      "geographicalExtent":
-      [
-        84616.468,
-        447422.999,
-        -0.452,
-        85140.839,
-        447750.636,
-        16.846
-      ],
-      "datasetReferenceDate": "2019-01-13"
+      "geographicalExtent": [ 84710.1, 446846.0, -5.3, 84757.1, 446944.0, 40.9 ],
+      "identifier": "eaeceeaa-3f66-429a-b81d-bbc6140b8c1c",
+      "pointOfContact": {
+        "contactName": "3D geoinformation group, Delft University of Technology",
+        "contactType": "organization",
+        "role": "owner",
+        "phone": "+31-6666666666",
+        "emailAddress": "3dgeoinfo-bk@tudelft.nl",
+        "website": "https://3d.bk.tudelft.nl",
+        "address": "Julianalaan 134, Delft 2628BL, the Netherlands"
+      },
+      "referenceDate": "1977-02-28",
+      "referenceSystem": "https://www.opengis.net/def/crs/EPSG/0/2355",
+      "title": "Buildings in LoD2.3 of Chibougamau, Québec"
     },
     "+metadata-extended": {
+        "isTriangulated": false,
         "metadataDateStamp": "2021-07-12",
         "datasetTopicCategory": "geoscientificInformation",
         "spatialRepresentationType": "vector",
@@ -56,6 +57,8 @@ and the MetadataExtended Extension adds several ISO19115-compliant properties, s
         "datasetCharacterSet": "UTF-8",
         "textures": "absent",
         "materials": "absent"
-    }
+    },
+    "CityObjects": {},
+    "vertices": []
   }
 ```
