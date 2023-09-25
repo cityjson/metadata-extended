@@ -4,7 +4,7 @@
 CityJSON Extension to store ISO19115-compliant metadata, extends the few metadata properties of the core.
 Works with CityJSON v1.1+ only.
 
-The CityJSON v1.1 core `"metadata"` has only those 6 properties ([see specifications for more details](https://www.cityjson.org/specs/#metadata)):
+The CityJSON core `"metadata"` has only those 6 properties ([see specifications for more details](https://www.cityjson.org/specs/#metadata):
 
   - geographicalExtent
   - identifier
@@ -56,8 +56,8 @@ cjio myfile.city.json metadata_remove save myfile.city.json
     {
         "Metadata-Extended":
         {
-            "url": "https://raw.githubusercontent.com/cityjson/metadata-extended/0.6/metadata-extended.ext.json",
-            "version": "0.6"
+            "url": "https://raw.githubusercontent.com/cityjson/metadata-extended/0.7/metadata-extended.ext.json",
+            "version": "0.7"
         }        
     },
     "metadata":
@@ -71,7 +71,9 @@ cjio myfile.city.json metadata_remove save myfile.city.json
         "phone": "+31-6666666666",
         "emailAddress": "3dgeoinfo-bk@tudelft.nl",
         "website": "https://3d.bk.tudelft.nl",
-        "address": "Julianalaan 134, Delft 2628BL, the Netherlands"
+        "address": {
+          "details": "Julianalaan 134, Delft 2628BL, the Netherlands"
+        }
       },
       "referenceDate": "1977-02-28",
       "referenceSystem": "https://www.opengis.net/def/crs/EPSG/0/2355",

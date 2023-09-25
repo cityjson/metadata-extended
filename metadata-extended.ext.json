@@ -1,8 +1,9 @@
 {
   "type": "CityJSON_Extension",
   "name": "MetadataExtended",
-  "uri": "https://raw.githubusercontent.com/cityjson/metadata-extended/0.6/metadata-extended.ext.json",
+  "uri": "https://raw.githubusercontent.com/cityjson/metadata-extended/0.7/metadata-extended.ext.json",
   "version": "0.6",
+  "versionCityJSON": "2.0",
   "description": "Extension to store ISO 19115 metadata, to extend the core of CityJSON v1.1+",
   
   "definitions": {
@@ -102,6 +103,8 @@
   "extraAttributes": {},
 
   "extraCityObjects": {},
+
+  "extraSemanticSurfaces": {},
 
   "extraRootProperties": {
     "+metadata-extended": {
