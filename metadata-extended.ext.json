@@ -95,8 +95,7 @@
         "presentLoDs": {
           "$ref": "#/definitions/presentLoDs"
         }
-      },
-      "additionalProperties": false
+      }
     }
   },
 
